@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&display=swap" rel="stylesheet">
+        <style>
+            body {
+                margin: 0;
+                overflow: hidden;
+                background-color: #ff9993;
+            }
+
+            .flaming {
+                position: absolute;
+                width: 100vw;
+                height: 100vh;
+            }
+
+            .flaming .thing {
+                position: absolute;
+                font-size: 2em;
+                opacity: 0;
+                animation-name: fadeUp;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease;
+            }
+
+            .flaming .thing:nth-child(1) {
+                left: 10%;
+                top: 10%;
+                color: rgba(255, 255, 255, .5);
+                animation-delay: 0s;
+            }
+
+            .flaming .thing:nth-child(2) {
+                right: 10%;
+                top: 20%;
+                color: rgba(255, 255, 255, .4);
+                animation-delay: .3s;
+            }
+
+            .flaming .thing:nth-child(3) {
+                left: 40%;
+                top: 40%;
+                color: rgba(255, 255, 255, .5);
+                animation-delay: .6s;
+            }
+
+            .flaming .thing:nth-child(4) {
+                left: 5%;
+                bottom: 0%;
+                color: rgba(255, 255, 255, .5);
+                animation-delay: 1.2s;
+            }
+
+            .flaming .thing:nth-child(5) {
+                left: 15%;
+                top: 30%;
+                color: rgba(255, 255, 255, .6);
+                animation-delay: 1.5s;
+            }
+
+            .flaming .thing:nth-child(6) {
+                right: 5%;
+                bottom: 0%;
+                color: rgba(255, 255, 255, .3);
+                animation-delay: 1.8s;
+            }
+
+            .flaming .thing:nth-child(7) {
+                right: 25%;
+                top: 5%;
+                color: rgba(255, 255, 255, .6);
+                animation-delay: 2.1s;
+            }
+
+            .flaming .thing:nth-child(8) {
+                left: 30%;
+                bottom: 30%;
+                color: rgba(255, 255, 255, .4);
+                animation-delay: 2.4s;
+            }
+
+            @keyframes fadeUp {
+                0% {
+                    opacity: 0;
+                }
+
+                25% {
+                    opacity: 1;
+                }
+
+                50% {
+                    opacity: 0;
+                    transform: translateY(-50%);
+                }
+            }
+
+            .landing-container{
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                z-index: 2;
+                position: relative;
+            }
+            .landing-title{
+                font-family: 'Pacifico', cursive;
+                font-size: 28px;
+                color: #f8e559;
+                text-align: center;
+                margin-top: 30px;
+                margin-bottom: 25px;
+            }
+            @media (max-width: 576px) {
+              .landing-title {
+                font-size: 24px;
+              }
+            }
+            .landing-img{
+                width: 100%;
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .landing-img img {
+                max-width: 80%;
+                width: 300px;
+                height: auto;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flaming">
+            <div class="thing">&#10084;</div>
+            <div class="thing">&#10084;</div>
+            <div class="thing">&#10084;</div>
+            <div class="thing">&#10084;</div>
+            <div class="thing">&#10084;</div>
+            <div class="thing">&#10084;</div>
+            <div class="thing">&#10084;</div>
+            <div class="thing">&#10084;</div>
+        </div>
+        <div class="landing-container">
+            <div class="landing-img">
+                <img src="happy.gif" alt="">
+            </div>
+            <h1 class="landing-title">I knew you would say YES!</h1>
+
+        </div>
+    </body>
+</html>
