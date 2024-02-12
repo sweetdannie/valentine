@@ -153,7 +153,7 @@
             }
             .landing-buttons a {
                 position: relative;
-                width: 100px;
+                width: 120px;
                 height: 48px;
                 font-family: 'Montserrat', sans-serif;
                 font-size: 18px;
@@ -207,9 +207,27 @@
 
             <div class="landing-buttons">
                 <a href="yes.html" class="yes-button">Yes</a>
-                <a href="yes.html" class="no-button">Yes</a>
+                <a href="#" class="no-button">Yes</a>
             </div>
 
         </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let textChanged = false;
+            const noButton = document.querySelector('.no-button');
+
+            noButton.addEventListener('click', function (event) {
+                event.preventDefault(); // Prevent the default behavior (navigating to the link)
+
+                if (!textChanged) {
+                    noButton.innerHTML = 'Yes I will'; // Change the text of the button
+                    noButton.classList.add('clicked'); // Add a class for styling when clicked
+                    textChanged = true; // Set the flag to true after changing the text
+                } else {
+                    window.location.href = 'yes.html'; // Navigate to the link if the text has been changed
+                }
+            });
+        });
+    </script>
     </body>
 </html>
