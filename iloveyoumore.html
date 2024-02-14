@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: pink;
+        }
+
+.box {
+    width: 120px;
+    height: 120px;
+    background: #ff0080;
+    margin: 200px auto;
+    margin-bottom: 80px;
+    transform: rotate(45deg) scale(0.9);
+    animation: change 1s infinite;
+    box-shadow: 0 0 30px 5px rgba(255, 0, 128);
+}
+.box::after,
+.box::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: #ff0080;
+    border-radius: 50%;
+    box-shadow: 0 0 30px 5px rgba(255, 0, 128);
+}
+.box::after {
+    left: -68px;
+}
+.box::before {
+    top: -68px;
+}
+@keyframes change {
+    0% {
+        transform: rotate(45deg) scale(0.85);
+    }
+
+    50% {
+        transform: rotate(45deg) scale(1);
+    }
+
+    100% {
+        transform: rotate(45deg) scale(0.85);
+    }
+}
+</style>
+</head>
+
+    <body>
+        <div class="box"></div>
+        <body style="margin: auto; 
+        padding: 6px 6px; 
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 30px;
+        font-style: italic;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        text-shadow: 3px 3px 5px rgba(255, 0, 128);"></body>
+        <button id="toggleBtn">😘</button>
+        <p id="text">You know I love you soo much</p >
+    </body>
+<script>
+    const toggleBtn=document.getElementById("toggleBtn");
+    const text = document.getElementById("text");
+    
+    toggleBtn.addEventListener("click", function() {
+  if (text.textContent === "You know I love you soo much") {
+    text.textContent = "And I can't wait to meet you";
+  } else {
+    text.textContent = "You know I love you soo much";
+  }
+});
+</script>
+</html>
